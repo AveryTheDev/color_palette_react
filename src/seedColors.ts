@@ -1,4 +1,6 @@
-export default [
+import { iSeedColors } from "./types/seedColors";
+
+export const seedColors: Array<iSeedColors> = [
     {
         paletteName: "Material UI Colors",
         id: "material-ui-colors",
