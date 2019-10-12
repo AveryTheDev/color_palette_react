@@ -1,4 +1,4 @@
-export interface colorBox {
+export interface iColorBox {
     background: string;
     name: string;
 }

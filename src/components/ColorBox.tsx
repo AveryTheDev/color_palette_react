@@ -1,7 +1,8 @@
 import React from "react";
-import { colorBox } from "../types/colorbox";
+import { iColorBox } from "../types/colorbox";
+import "./ColorBox.css";
 
-const ColorBox = ({ background, name }: colorBox) => {
+const ColorBox = ({ background, name }: iColorBox) => {
     return (
         <div style={{ background: background }} className="ColorBox">
             <span>{name}</span>
