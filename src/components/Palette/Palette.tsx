@@ -1,12 +1,12 @@
 import React from "react";
 import ColorBox from "../ColorBox";
-import { iSeedColors, iColors } from "../../types/seedColors";
 import "./Palette.css";
+import { iGeneratePalette, PaletteColors } from "../../types/generateColors";
 
-const Palette = ({ colors }: iSeedColors): JSX.Element => {
-    const colorBoxes = colors.map(
-        (color: iColors): JSX.Element => {
-            return <ColorBox background={color.color} name={color.name} />;
+const Palette = ({ palette }: any): JSX.Element => {
+    const colorBoxes = palette.colors[500].map(
+        (color: PaletteColors): JSX.Element => {
+            return <ColorBox background={color.hex} name={color.name} />;
         }
     );
 
