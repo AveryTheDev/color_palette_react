@@ -3,10 +3,10 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import { iColorBox } from "../types/colorbox";
 import "./ColorBox.css";
 
-const ColorBox = ({ background, name }: iColorBox) => {
+const ColorBox = ({ background, name }: iColorBox): JSX.Element => {
     const [copied, setCopied] = useState(false);
 
-    const changeCopyState = () => {
+    const changeCopyState = (): void => {
         setCopied(true);
 
         setTimeout(() => {

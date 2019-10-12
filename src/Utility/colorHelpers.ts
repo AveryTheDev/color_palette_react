@@ -1,23 +1,10 @@
 import chroma from "chroma-js";
 import { iSeedColors } from "../types/seedColors";
+import { iGeneratePalette } from "../types/generateColors";
+
 const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-interface iGeneratePalette {
-    paletteName: string;
-    id: string;
-    emoji?: string;
-    colors: {
-        [index: number]: Array<{
-            name: string;
-            id: string;
-            hex: string;
-            rgb: string;
-            rgba: string;
-        }>;
-    };
-}
-
-export function generatePalette(starterPalette: iSeedColors) {
+export function generatePalette(starterPalette: iSeedColors): iGeneratePalette {
     let newPalette: iGeneratePalette = {
         paletteName: starterPalette.paletteName,
         id: starterPalette.id,
@@ -44,7 +31,7 @@ export function generatePalette(starterPalette: iSeedColors) {
     }
     return newPalette;
 }
-function getRange(hexColor: string) {
+function getRange(hexColor: string): Array<string> {
     const end = "#fff";
     return [
         chroma(hexColor)
@@ -55,7 +42,7 @@ function getRange(hexColor: string) {
     ];
 }
 
-function getScale(hexColor: string, numberOfColors: number) {
+function getScale(hexColor: string, numberOfColors: number): Array<string> {
     return chroma
         .scale(getRange(hexColor))
         .mode("lab")
