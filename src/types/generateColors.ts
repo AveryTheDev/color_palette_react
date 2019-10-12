@@ -5,7 +5,6 @@ export interface iGeneratePalette {
     colors: {
         [index: number]: Array<PaletteColors>;
     };
-    palette?: any;
 }
 
 export interface PaletteColors {
