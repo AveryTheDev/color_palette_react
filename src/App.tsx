@@ -5,7 +5,7 @@ import Palette from "./components/Palette/Palette";
 const App: React.FC = () => {
     return (
         <div>
-            <Palette />
+            <Palette palette={...seedColors[4]} />
         </div>
     );
 };
