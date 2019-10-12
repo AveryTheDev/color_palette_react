@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { iColorBox } from "../types/colorbox";
 import "./ColorBox.css";
 
 const ColorBox = ({ background, name }: iColorBox) => {
+    const [copied, setCopied] = useState(false);
+
     return (
-        <CopyToClipboard text="Hellooooo">
+        <CopyToClipboard text={background}>
             <div style={{ background }} className="ColorBox">
+                <div style={{ background }} className="copy-overlay"></div>
                 <div className="copy-container">
                     <div className="box-content">
                         <span>{name}</span>
