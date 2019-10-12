@@ -1,6 +1,7 @@
 import React from "react";
 import ColorBox from "../ColorBox";
 import { iSeedColors, iColors } from "../../types/seedColors";
+import "./Palette.css";
 
 const Palette = ({ colors }: iSeedColors) => {
     const colorBoxes = colors.map((color: iColors) => {
