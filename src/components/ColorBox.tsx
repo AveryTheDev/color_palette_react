@@ -21,7 +21,7 @@ const ColorBox = ({ background, name }: iColorBox) => {
                     style={{ background }}
                     className={`copy-overlay ${copied && "show"}`}
                 ></div>
-                <div className="copy-message">
+                <div className={`copy-message ${copied && "show"}`}>
                     <h1>Copied!</h1>
                     <p>{background}</p>
                 </div>
